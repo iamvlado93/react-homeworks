@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
+import SquareComponent from './components/square';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <SquareComponent label='Big square' cssClass='big-square' /> 
+    <SquareComponent label='Medium square' cssClass='medium-square' />
+    <SquareComponent label='Small square' cssClass='small-square' />
   </React.StrictMode>,
   document.getElementById('root')
 );
