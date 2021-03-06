@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 // hw-1
 import SquareComponent from './components/square';
@@ -15,6 +15,7 @@ import JSONCycleComponent from './components/jsonCycle';
 import DropdownComponent from './components/dropdownList';
 import TrackButton from './components/dropdownList';
 import LoginComponent from './components/loginForm';
+import ToDoComponent from './components/toDoList/todoList';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -30,6 +31,8 @@ ReactDOM.render(
     {/* <DropdownComponent /> */}
     {/* <TrackButton /> */}
     {/* <LoginComponent /> */}
+    {/* <ToDoComponent /> */}
+    <App/>
     
   </React.StrictMode>,
   document.getElementById('root')
