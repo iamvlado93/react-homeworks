@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
 // hw-1
 import SquareComponent from './components/square';
@@ -13,7 +13,7 @@ import ActiveSpinnerComponent from './components/spinnerActive';
 import SignInFormComponent from './components/sigInForm';
 import JSONCycleComponent from './components/jsonCycle';
 import DropdownComponent from './components/dropdownList';
-import TrackButton from './components/dropdownList';
+import TrackButton from './components/trackButton/trackButton';
 import LoginComponent from './components/loginForm';
 import ToDoComponent from './components/toDoList/todoList';
 
@@ -29,11 +29,10 @@ ReactDOM.render(
     {/* <SignInFormComponent /> */}
     {/* <JSONCycleComponent /> */}
     {/* <DropdownComponent /> */}
-    {/* <TrackButton /> */}
+    <TrackButton />
     {/* <LoginComponent /> */}
     {/* <ToDoComponent /> */}
-    <App/>
-    
+    {/* <App/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
