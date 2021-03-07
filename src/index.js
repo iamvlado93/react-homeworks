@@ -3,10 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
-// hw-1
 import SquareComponent from './components/square';
 import ItalicComponent from './components/italicText';
-// hw-2
 import SpinnerComponent from './components/spinner';
 import SpinnerComponentProps from './components/spinnerProps';
 import ActiveSpinnerComponent from './components/spinnerActive';
@@ -16,6 +14,8 @@ import DropdownComponent from './components/dropdownList';
 import TrackButton from './components/trackButton/trackButton';
 import LoginComponent from './components/loginForm';
 import ToDoComponent from './components/toDoList/todoList';
+import CounterComponent from './components/counter';
+import TextComponent from './components/textFonts';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -29,10 +29,12 @@ ReactDOM.render(
     {/* <SignInFormComponent /> */}
     {/* <JSONCycleComponent /> */}
     {/* <DropdownComponent /> */}
-    <TrackButton />
+    {/* <TrackButton /> */}
     {/* <LoginComponent /> */}
     {/* <ToDoComponent /> */}
     {/* <App/> */}
+    {/* <CounterComponent default={0}/> */}
+    <TextComponent/>
   </React.StrictMode>,
   document.getElementById('root')
 );
