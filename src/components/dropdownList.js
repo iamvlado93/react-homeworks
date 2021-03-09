@@ -23,7 +23,7 @@ class DropdownComponent extends React.Component {
   render() {
     return (
     <div>
-      <button onClick={this.onToggle}>Ингредиенты{this.state.opened ? 'вверх' : 'вниз'}</button>
+      <button onClick={this.onToggle}>Ингредиенты{this.state.opened ? '☝🏻' : '👇🏻'}</button>
       
       { this.state.opened && this.ingredients.map((item) => {
           return <div key={item.id}>{item.text}</div>

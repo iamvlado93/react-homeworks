@@ -6,7 +6,6 @@ class ToDoComponent extends React.Component {
     state = {
         todoItems: initialItems,
         newItem: '' 
-        // то, что сейчас в инпуте
     }
 
     onChangeText = (event) => {

@@ -14,27 +14,26 @@ code {
 
 #root {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 15px;
 }
 
 .big-square {
-  width: 280px;
-  height: 280px;
+  width: 70px;
+  height: 70px;
   background-color: rgb(115, 255, 0);
 }
 
 .medium-square {
-  width: 200px;
-  height: 200px;
+  width: 50px;
+  height: 50px;
   background-color: rgb(154, 162, 209);
 }
 
 .small-square {
-  width: 100px;
-  height: 100px;
+  width: 30px;
+  height: 30px;
   background-color: rgb(255, 0, 179);
 }
 
@@ -75,6 +74,15 @@ code {
 
 .lol {
   display: none;
+}
+
+img {
+  width: 200px;
+  height: 100px;
+}
+
+ul {
+  list-style-type: none;
 }
 
 

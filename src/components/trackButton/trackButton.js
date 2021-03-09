@@ -3,7 +3,7 @@ import pic1 from '../trackButton/img/1.png';
 import pic2 from '../trackButton/img/2.png';
 import pic3 from '../trackButton/img/3.png';
 
-class TrackButton extends React.Component {
+class TrackButtonComponent extends React.Component {
 
     images = [pic1, pic2, pic3];
 
@@ -23,4 +23,4 @@ class TrackButton extends React.Component {
 
 }
 
-export default TrackButton;
+export default TrackButtonComponent;

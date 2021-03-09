@@ -2,63 +2,181 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Component } from 'react';
+import SquareComponent from './components/square';
+import ItalicComponent from './components/italicText';
+import SpinnerComponent from './components/spinner';
+import SpinnerComponentProps from './components/spinnerProps';
+import ActiveSpinnerComponent from './components/spinnerActive';
+import SignInFormComponent from './components/sigInForm';
+import JSONCycleComponent from './components/jsonCycle';
+import DropdownComponent from './components/dropdownList';
+import TrackButtonComponent from './components/trackButton/trackButton';
+import LoginComponent from './components/loginForm';
+import ToDoComponent from './components/toDoList/todoList';
+import CounterComponent from './components/counter';
+import TextComponent from './components/textFonts';
 
-class App extends Component() {
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-  state  = {
-    currentPage: 'home'
-  }
+export default function App() {
+  return (
+    <Router>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/ItalicComponent">Italic Component</Link>
+            </li>
+            <li>
+              <Link to="/SquareComponent">Square Component</Link>
+            </li>
+            <li>
+              <Link to="/CounterComponent">Counter Component</Link>
+            </li>
+            <li>
+              <Link to="/ActiveSpinnerComponent">Active Spinner Component</Link>
+            </li>
+            <li>
+              <Link to="/SpinnerComponent">Spinner Component</Link>
+            </li>
+            <li>
+              <Link to="/TextComponent">Text Component</Link>
+            </li>
+            <li>
+              <Link to="/DropdownComponent">Dropdown Component</Link>
+            </li>
 
-  renderPage = () => {
-    switch (this.state.currentPage) {
-      case 'home' : {
-        return <PageHome/>
-      }
-      case 'about' : {
-        return <PageAbout/>
-      }
-      case 'contacts' : {
-        return <PageContacts/>
-      }
-    }
-  } 
+            <li>
+              <Link to="/SignInFormComponent">Sign In Form Component</Link>
+            </li>
 
-  goHome = () => {
-    this.setState({ currentPage: 'home'});
-  }
-  goToContacts = () => {
-    this.setState({ currentPage: 'contacts'});
-  }
-  goToAbout = () => {
-    this.setState({ currentPage: 'about'});
-  }
+            <li>
+              <Link to="/LoginComponent">Login Component</Link>
+            </li>
 
-  goToRoute = (nextRoute) => {
-    this.setState({ currentPage: nextRoute});
-  }
+            <li>
+              <Link to="/JSONCycleComponent">JSON Cycle Component</Link>
+            </li>
 
-  render () {
-    return (
-      <div>
-        <button onClick={() => this.goToRoute('home')}>Home</button>
-        <button onClick={() => this.goToRoute('about')}>About</button>
-        <button onClick={() => this.goToRoute('contacts')}>Contacts</button>
-        {this.renderPage()}
-      </div>
-    )
-  }
+            <li>
+              <Link to="/TrackButtonComponent">Track Button Component</Link>
+            </li>
+
+            <li>
+              <Link to="/ToDoComponent">To Do Component</Link>
+            </li>
+          </ul>
+        </nav>
+
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/ItalicComponent">
+          <ItalicComponent />
+          </Route>
+
+          <Route path="/SquareComponent">
+          <SquareComponent />
+          </Route>
+
+          <Route path="/CounterComponent">
+          <CounterComponent default={0} />
+          </Route>
+
+          <Route path="/ActiveSpinnerComponent">
+          <ActiveSpinnerComponent />
+          </Route>
+
+          <Route path="/SpinnerComponent">
+          <SpinnerComponent />
+          </Route>
+
+          <Route path="/TextComponent">
+          <TextComponent />
+          </Route>
+
+          <Route path="/DropdownComponent">
+          <DropdownComponent />
+          </Route>
+
+          <Route path="/SignInFormComponent">
+          <SignInFormComponent />
+          </Route>
+
+          <Route path="/LoginComponent">
+          <LoginComponent />
+          </Route>
+
+          <Route path="/JSONCycleComponent">
+          <JSONCycleComponent />
+          </Route>
+
+          <Route path="/TrackButtonComponent">
+          <TrackButtonComponent />
+          </Route>
+
+          <Route path="/ToDoComponent">
+          <ToDoComponent />
+          </Route>
+        </Switch>
+    </Router>
+  );
 }
 
-const PageAbout = () => {
-  return<div>About</div>
+function Italic() {
+  return <ItalicComponent />;
 }
 
-const PageHome = () => {
-  return<div>Home</div>
+function Square() {
+  return (
+  <SquareComponent label='Big square' cssClass='big-square' />,
+  <SquareComponent label='Medium square' cssClass='medium-square' />,
+  <SquareComponent label='Small square' cssClass='small-square' />
+  );
 }
 
-const PageContacts = () => {
-  return<div>Contacts</div>
+function Counter() {
+  return <CounterComponent />;
 }
 
-export default App;
+function ActiveSpinner() {
+  return <ActiveSpinnerComponent />;
+}
+
+function Spinner() {
+  return <SpinnerComponent />;
+}
+
+function Text() {
+  return <TextComponent />;
+}
+
+function Dropdown() {
+  return <DropdownComponent />;
+}
+
+function SignInForm() {
+  return <SignInFormComponent />;
+}
+
+function LoginForm() {
+  return <LoginComponent />;
+}
+
+function JSONCycle() {
+  return <JSONCycleComponent />;
+}
+
+function TrackButton() {
+  return <TrackButtonComponent />
+}
+
+function ToDo() {
+  return <ToDoComponent />
+}
+
+
