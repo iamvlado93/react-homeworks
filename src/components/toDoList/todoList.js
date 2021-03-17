@@ -30,7 +30,7 @@ class ToDoComponent extends React.Component {
         return (
         <div>
             {this.state.todoItems.map((item) => {
-                return<div key={item.id}>{item.text}</div>
+                return <div key={item.id}>{item.text}</div>
             })}
             <input type="text" onChange={this.onChangeText} value={this.state.newItem}/>
             <button onClick={this.onAddItem}>Add</button>

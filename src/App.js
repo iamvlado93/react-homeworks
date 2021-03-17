@@ -15,6 +15,7 @@ import LoginComponent from './components/loginForm';
 import ToDoComponent from './components/toDoList/todoList';
 import CounterComponent from './components/counter';
 import TextComponent from './components/textFonts';
+import SignUpFormComponent from './components/signUpForm/signUpForm';
 
 import {
   BrowserRouter as Router,
@@ -69,11 +70,15 @@ export default function App() {
             <li>
               <Link to="/ToDoComponent">To Do Component</Link>
             </li>
+            <li>
+              <Link to="/SignUpFormComponent">Sign Up Form</Link>
+            </li>
           </ul>
         </nav>
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
+
         <Switch>
           <Route path="/ItalicComponent">
           <ItalicComponent />
@@ -121,6 +126,10 @@ export default function App() {
 
           <Route path="/ToDoComponent">
           <ToDoComponent />
+          </Route>
+
+          <Route path="/SignUpFormComponent">
+          <SignUpFormComponent />
           </Route>
         </Switch>
     </Router>
@@ -177,6 +186,10 @@ function TrackButton() {
 
 function ToDo() {
   return <ToDoComponent />
+}
+
+function SignUp() {
+  return <SignUpFormComponent />
 }
 
 
